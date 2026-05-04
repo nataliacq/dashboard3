@@ -1,0 +1,222 @@
+{
+  "2615250": [
+    {
+      "documento_principal": {
+        "documento_id": 2388754,
+        "documento_cud": "20260011129573",
+        "documento_desc": "SOLICITO EVALUACION DEL LEVANTAMIENTO DE OBSERVACIONES DE LA DECLARACION DE IMPACTO AMBIENTAL PROYECTO DE INVERSIoN: ”CREACIoN DEL SERVICIO DE MOVILIDAD URBANA EN AVENIDA MAGOLLO EN EL TRAMO EMPALME PE-1S (ROTONDA INGRESO A TACNA) – EMPALME TA-635 (AV. CAPLINA) – EMPALME AV. ZARUMILLA, DISTRITO DE TACNA DE LA PROVINCIA DE TACNA DEL DEPARTAMENTO DE TACNA”, CON CUI N° 2615250.",
+        "fecha_registro": "29/04/2026 16:16:34",
+        "transacciones": [
+          {
+            "transac_id": 12143071,
+            "tipo_movimiento": "GENERADO",
+            "fecha_mov": "29/04/2026 16:16:34",
+            "origen": {
+              "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+              "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+            },
+            "destino": {
+              "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+              "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+            },
+            "proveidos": []
+          },
+          {
+            "transac_id": 12143101,
+            "tipo_movimiento": "DERIVADO",
+            "fecha_mov": "29/04/2026 16:17:41",
+            "origen": {
+              "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+              "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+            },
+            "destino": {
+              "nombre": "SOLIS PALACIOS, RUBEN ALCIDES",
+              "oficina": "Gerencia Regional de Recursos Naturales y Gestion del Medio Ambiente"
+            },
+            "proveidos": []
+          },
+          {
+            "transac_id": 12146426,
+            "tipo_movimiento": "RECIBIDO",
+            "fecha_mov": "30/04/2026 10:08:02",
+            "origen": {
+              "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+              "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+            },
+            "destino": {
+              "nombre": "SOLIS PALACIOS, RUBEN ALCIDES",
+              "oficina": "Gerencia Regional de Recursos Naturales y Gestion del Medio Ambiente"
+            },
+            "proveidos": []
+          },
+          {
+            "transac_id": 12146540,
+            "tipo_movimiento": "DERIVADO",
+            "fecha_mov": "30/04/2026 10:14:50",
+            "origen": {
+              "nombre": "SOLIS PALACIOS, RUBEN ALCIDES",
+              "oficina": "Gerencia Regional de Recursos Naturales y Gestion del Medio Ambiente"
+            },
+            "destino": {
+              "nombre": "TORRES RUIZ HUIDOBRO, EVELYN NATHALIE",
+              "oficina": "SUB GERENCIA DE GESTION AMBIENTAL"
+            },
+            "proveidos": []
+          },
+          {
+            "transac_id": 12146589,
+            "tipo_movimiento": "RECIBIDO",
+            "fecha_mov": "30/04/2026 10:17:47",
+            "origen": {
+              "nombre": "SOLIS PALACIOS, RUBEN ALCIDES",
+              "oficina": "Gerencia Regional de Recursos Naturales y Gestion del Medio Ambiente"
+            },
+            "destino": {
+              "nombre": "TORRES RUIZ HUIDOBRO, EVELYN NATHALIE",
+              "oficina": "SUB GERENCIA DE GESTION AMBIENTAL"
+            },
+            "proveidos": []
+          },
+          {
+            "transac_id": 12146608,
+            "tipo_movimiento": "DERIVADO",
+            "fecha_mov": "30/04/2026 10:19:20",
+            "origen": {
+              "nombre": "TORRES RUIZ HUIDOBRO, EVELYN NATHALIE",
+              "oficina": "SUB GERENCIA DE GESTION AMBIENTAL"
+            },
+            "destino": {
+              "nombre": "POSTIGO LAMA, SILVIA NIDIA",
+              "oficina": "SUB GERENCIA DE GESTION AMBIENTAL"
+            },
+            "proveidos": []
+          }
+        ]
+      },
+      "documentos_hijos": [
+        {
+          "documento_id": 2388339,
+          "documento_cud": "20260011129158",
+          "documento_desc": "PRESENTACION DE LEVANTAMIENTO DE OBSERVACIONES DE LA DECLARACION DE IMPACTO AMBIENTAL - DIA",
+          "fecha_registro": "29/04/2026 13:50:43",
+          "transacciones": [
+            {
+              "transac_id": 12140303,
+              "tipo_movimiento": "GENERADO",
+              "fecha_mov": "29/04/2026 13:50:43",
+              "origen": {
+                "nombre": "CHACOLLA FLORES, LUZ MARINA",
+                "oficina": "OFICINA DE ATENCION AL CIUDADANO Y ARCHIVO INSTITUCIONAL"
+              },
+              "destino": {
+                "nombre": "CHACOLLA FLORES, LUZ MARINA",
+                "oficina": "OFICINA DE ATENCION AL CIUDADANO Y ARCHIVO INSTITUCIONAL"
+              },
+              "proveidos": []
+            },
+            {
+              "transac_id": 12140310,
+              "tipo_movimiento": "DERIVADO",
+              "fecha_mov": "29/04/2026 13:51:36",
+              "origen": {
+                "nombre": "CHACOLLA FLORES, LUZ MARINA",
+                "oficina": "OFICINA DE ATENCION AL CIUDADANO Y ARCHIVO INSTITUCIONAL"
+              },
+              "destino": {
+                "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "proveidos": []
+            },
+            {
+              "transac_id": 12140996,
+              "tipo_movimiento": "RECIBIDO",
+              "fecha_mov": "29/04/2026 14:39:17",
+              "origen": {
+                "nombre": "CHACOLLA FLORES, LUZ MARINA",
+                "oficina": "OFICINA DE ATENCION AL CIUDADANO Y ARCHIVO INSTITUCIONAL"
+              },
+              "destino": {
+                "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "proveidos": []
+            },
+            {
+              "transac_id": 12141204,
+              "tipo_movimiento": "DERIVADO",
+              "fecha_mov": "29/04/2026 14:51:16",
+              "origen": {
+                "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "destino": {
+                "nombre": "VASQUEZ COHAILA, LIZBETH YANIRA",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "proveidos": [
+                "TRAMITE CORRESPONDIENTE"
+              ]
+            },
+            {
+              "transac_id": 12141375,
+              "tipo_movimiento": "RECIBIDO",
+              "fecha_mov": "29/04/2026 14:59:05",
+              "origen": {
+                "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "destino": {
+                "nombre": "VASQUEZ COHAILA, LIZBETH YANIRA",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "proveidos": []
+            },
+            {
+              "transac_id": 12141377,
+              "tipo_movimiento": "DERIVADO",
+              "fecha_mov": "29/04/2026 14:59:13",
+              "origen": {
+                "nombre": "VASQUEZ COHAILA, LIZBETH YANIRA",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "destino": {
+                "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "proveidos": []
+            },
+            {
+              "transac_id": 12142174,
+              "tipo_movimiento": "RECIBIDO",
+              "fecha_mov": "29/04/2026 15:39:43",
+              "origen": {
+                "nombre": "VASQUEZ COHAILA, LIZBETH YANIRA",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "destino": {
+                "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "proveidos": []
+            },
+            {
+              "transac_id": 12143097,
+              "tipo_movimiento": "ADJUNTADO",
+              "fecha_mov": "29/04/2026 16:17:30",
+              "origen": {
+                "nombre": "VASQUEZ COHAILA, LIZBETH YANIRA",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "destino": {
+                "nombre": "SANCHEZ VILDOSO, EDUARDO MIGUEL",
+                "oficina": "GERENCIA REGIONAL DE INFRAESTRUCTURA"
+              },
+              "proveidos": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documento_principal": {

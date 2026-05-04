@@ -1,0 +1,55 @@
+**Cómo saber a qué transacción del padre fue adjuntado el hijo**
+
+  La clave está en el tipo de movimiento "ADJUNTADO" en las transacciones del documento hijo, combinado con la proximidad temporal y de transac_id con las transacciones del padre.
+
+  En este ejemplo concreto:
+
+  Hijo (CUD 20260011129158):
+  - Última transacción → transac_id: 12143097, tipo ADJUNTADO, a las 16:17:30
+
+  Padre (CUD 20260011129573):
+  - transac_id: 12143071 — GENERADO — 16:16:34
+  - transac_id: 12143101 — DERIVADO — 16:17:41 ← esta es la transacción vinculada
+
+  Por qué es la 12143101 (DERIVADO):
+
+  1. Por transac_id secuencial: El ADJUNTADO del hijo es 12143097 y el DERIVADO del padre es 12143101. Los IDs son correlativos — el adjunto ocurrió literalmente instantes antes de
+   que se ejecutara el DERIVADO.
+  2. Por timestamp: El ADJUNTADO fue a las 16:17:30 y el DERIVADO del padre a las 16:17:41 — apenas 11 segundos después.
+
+  Regla general para detectarlo programáticamente:
+
+  # 1. Buscar la transacción ADJUNTADO del hijo
+  adjuntado = next(t for t in hijo['transacciones'] if t['tipo_movimiento'] == 'ADJUNTADO')
+
+  # 2. Buscar en el padre la transacción cuyo transac_id es el más pequeño
+  #    que sea MAYOR al transac_id del ADJUNTADO
+  transacs_padre = sorted(padre['transacciones'], key=lambda t: t['transac_id'])
+  transac_padre_vinculada = next(
+      t for t in transacs_padre
+      if t['transac_id'] > adjuntado['transac_id']
+  )
+
+  globales y secuenciales en toda la base de datos.
+   que se ejecutara el DERIVADO.
+  2. Por timestamp: El ADJUNTADO fue a las 16:17:30 y el DERIVADO del padre a las 16:17:41 — apenas 11 segundos después.
+
+  Regla general para detectarlo programáticamente:
+
+  # 1. Buscar la transacción ADJUNTADO del hijo
+  adjuntado = next(t for t in hijo['transacciones'] if t['tipo_movimiento'] == 'ADJUNTADO')
+
+  # 2. Buscar en el padre la transacción cuyo transac_id es el más pequeño
+  #    que sea MAYOR al transac_id del ADJUNTADO
+  transacs_padre = sorted(padre['transacciones'], key=lambda t: t['transac_id'])
+  transac_padre_vinculada = next(
+      t for t in transacs_padre
+      if t['transac_id'] > adjuntado['transac_id']
+  )
+
+  Esto funciona porque el sistema registra primero el ADJUNTADO del hijo y luego, en la misma operación del usuario, el DERIVADO (u otro movimiento) del padre. Los transac_id son
+  globales y secuenciales en toda la base de datos.
+
+  ---
+  Nota: Esta estructura documentos_hijos con datos reales y el campo tipo_movimiento (vs codigo) es diferente al formato v3 documentado en CLAUDE.md — parece ser el formato v4.
+  ¿Quieres que actualice CLAUDE.md con esta nueva estructura?
