@@ -4,7 +4,7 @@ import time
 from pathlib import Path
 
 API_BASE = "http://10.128.145.23/api-cui/api.php"
-LISTA_FILE = "proyectosList"
+LISTA_FILE = "../data/proyectosList"
 JSON_BASE = Path(r"C:\Users\HP\Documents\OneDrive\TRAZABILIDAD OXI DASHBOARD\json")
 
 def siguiente_version():

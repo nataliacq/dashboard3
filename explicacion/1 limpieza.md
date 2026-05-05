@@ -4,7 +4,7 @@
 
 Limpiar los campos string de `proyectos_data.json` (v4) que venían con problemas desde la API fuente, generando un archivo limpio `proyectos_data_clean.json`.
 
-## Problemas detectados
+	## Problemas detectados
 
 | Campo | Espacios al final | Tildes | Newlines `\n` |
 |---|---:|---:|---:|

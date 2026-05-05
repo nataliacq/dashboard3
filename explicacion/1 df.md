@@ -91,13 +91,13 @@ df_hijos(data)           # 1 fila por documento hijo
 ## Uso básico
 
 ```python
-from json_loader import cargar_datos, buscar_por_cud, df_transacciones
+from preprocessing.json_loader import cargar_datos, buscar_por_cud, df_transacciones
 
 data = cargar_datos()
 
 # Búsqueda puntual
 obj = buscar_por_cud(data, "20260011129573")
-print(len(obj["documentos_hijos"]))   # 1
+print(len(obj["documentos_hijos"]))  # 1
 
 # DataFrame de transacciones solamente
 trans = df_transacciones(data)
