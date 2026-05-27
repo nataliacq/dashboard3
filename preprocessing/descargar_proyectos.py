@@ -1,11 +1,13 @@
 import requests
 import json
+import sys
 import time
 from pathlib import Path
 
 API_BASE = "http://10.128.145.23/api-cui/api.php"
-LISTA_FILE = "../data/proyectosList"
-JSON_BASE = Path(r"C:\Users\HP\Documents\OneDrive\TRAZABILIDAD OXI DASHBOARD\json")
+SCRIPT_DIR = Path(__file__).resolve().parent
+LISTA_FILE = SCRIPT_DIR.parent / "data" / "proyectosList"
+JSON_BASE = Path(r"C:\Users\HP\Documents\OneDrive\OPMI_2026\a oxi dash\v1 TRAZABILIDAD OXI DASHBOARD\json")
 
 def siguiente_version():
     nums = [
@@ -16,19 +18,27 @@ def siguiente_version():
     return max(nums) + 1 if nums else 1
 
 def cargar_codigos():
-    with open(LISTA_FILE) as f:
+    with open(LISTA_FILE, encoding="utf-8") as f:
         return [line.strip() for line in f if line.strip()]
 
 def descargar_proyecto(cui):
-    resp = requests.get(API_BASE, params={"cui": cui}, timeout=15)
-    resp.raise_for_status()
-    return resp.json()
+    try:
+        resp = requests.get(API_BASE, params={"cui": cui}, timeout=15)
+        resp.raise_for_status()
+        return resp.json()
+    except requests.exceptions.RequestException as e:
+        raise RuntimeError(f"No se pudo consultar la API para CUI {cui}: {e}") from e
+    except ValueError as e:
+        raise RuntimeError(f"La API devolvió una respuesta no JSON para CUI {cui}") from e
 
 def main():
+    global LISTA_FILE
+    if len(sys.argv) > 1:
+        LISTA_FILE = Path(sys.argv[1])
     codigos = cargar_codigos()
     version = siguiente_version()
     carpeta = JSON_BASE / f"v{version}"
-    carpeta.mkdir()
+    carpeta.mkdir(parents=True, exist_ok=False)
     output = carpeta / "proyectos_data.json"
 
     print(f"Descargando {len(codigos)} proyectos -> {carpeta}")

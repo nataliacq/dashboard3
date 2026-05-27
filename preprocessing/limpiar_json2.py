@@ -44,7 +44,7 @@ def filtrar_sin_transacciones(data: dict) -> tuple[dict, dict]:
 def marcar_auto_derivaciones(data: dict) -> tuple[dict, dict]:
     """
     Marca tipo_movimiento = "EXTERNO" cuando origen.nombre == destino.nombre
-    Y origen.oficina == destino.oficina (auto-derivación real a externo).
+    (la misma persona se deriva a sí misma).
     Devuelve (data, stats) con key "marcados".
     """
     marcados = 0
@@ -53,9 +53,7 @@ def marcar_auto_derivaciones(data: dict) -> tuple[dict, dict]:
             for t in obj.get("documento_principal", {}).get("transacciones", []):
                 origen = t.get("origen", {})
                 destino = t.get("destino", {})
-                if (origen.get("nombre") and
-                        origen["nombre"] == destino.get("nombre") and
-                        origen.get("oficina") == destino.get("oficina")):
+                if origen.get("nombre") and origen["nombre"] == destino.get("nombre"):
                     t["tipo_movimiento"] = "EXTERNO"
                     marcados += 1
     return data, {"marcados": marcados}
