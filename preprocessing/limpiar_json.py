@@ -1,14 +1,36 @@
 import json
+import re
 import unicodedata
+from pathlib import Path
+
+
+# Caracteres tipográficos -> equivalente ASCII (no son marcas combinantes,
+# por eso NFD no los toca y hay que reemplazarlos a mano).
+_REEMPLAZOS = {
+    '‘': "'", '’': "'",   # comillas simples curvas ' '
+    '“': '"', '”': '"',   # comillas dobles curvas " "
+    '–': '-', '—': '-',   # guiones largos - -
+    '…': '...',                # puntos suspensivos
+    '°': '', 'º': '', 'ª': '',  # grado y ordinales
+    ' ': ' ',                  # espacio no separable
+}
 
 
 def limpiar(s):
     if not s:
         return s
-    s = s.strip()
-    s = s.replace('\n', ' ').replace('\r', ' ')
+    # saltos de linea, retornos y tabulaciones -> espacio
+    s = re.sub(r'[\r\n\t]+', ' ', s)
+    # reemplaza caracteres tipograficos por su equivalente ASCII
+    for orig, repl in _REEMPLAZOS.items():
+        s = s.replace(orig, repl)
+    # quita tildes/diacriticos (NFD + elimina marcas combinantes)
     s = unicodedata.normalize('NFD', s)
     s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
+    # descarta cualquier caracter no-ASCII restante
+    s = s.encode('ascii', 'ignore').decode('ascii')
+    # colapsa espacios multiples y recorta extremos
+    s = re.sub(r' +', ' ', s).strip()
     return s
 
 
@@ -26,8 +48,9 @@ def limpiar_doc(doc):
         limpiar_transaccion(t)
 
 
-INPUT  = 'proyectos_data.json'
-OUTPUT = 'proyectos_data_clean.json'
+ROOT   = Path(__file__).resolve().parent.parent
+INPUT  = ROOT / 'proyectos_data.json'
+OUTPUT = ROOT / 'data' / 'proyectos_data_clean.json'
 
 with open(INPUT, encoding='utf-8') as f:
     data = json.load(f)
