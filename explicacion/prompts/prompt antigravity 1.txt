@@ -1,0 +1,67 @@
+Crea un dashboard en Streamlit a partir de un archivo Excel con varias hojas.
+la ubicacion del excel es: "C:\Users\HP\Documents\OneDrive\OXI ESTADO\OXI ESTADO.xlsm”
+Objetivo general:
+Desarrollar dashboard para hacer seguimiento a proyectos y documentos registrados en un sistema de gestión documentaria. El dashboard debe permitir visualizar el estado general de los proyectos, su avance, sus etapas, sus hitos y la comparación entre lo programado y lo real.
+Estructura de datos a considerar:
+1. Hoja "Estado qamqaqi":
+   - Contiene los proyectos y los documentos generados en el sistema de gestión documentaria. 
+- Considera estos archivos: C:\Users\HP\Documents\OneDrive\TRAZABILIDAD OXI DASHBOARD\json_descargados y C:\Users\HP\Documents\OneDrive\OXI ESTADO\OXI ESTADO.xlsm, hoja Tareas. Identificar las tareas que ocurren en cada proyecto a partir de la lista de tareas en hoja Tareas de cada archivo json en json_descargados, cada archivo es un proyecto. Genera un archivo csv para las nuevas tareas identificadas. En el json, "DE" significa derivado “RE” recibido, “GE” generado, solo me interesa cuando el documento es derivado y recibido.
+- las etapas son la columna categoría 1 de hoja Tareas, los hitos son el asunto breve. Calcular plazos aproximados a partir de promedio de todos los proyectos.
+   - A partir de esta información, el dashboard debe mostrar, como mínimo:
+     - etapa actual del proyecto
+     - fecha de inicio proyectada
+     - fecha de fin proyectada
+     - fecha de inicio real
+     - fecha de fin real
+     - cantidad de tareas completadas
+     - cantidad de tareas pendientes
+     - porcentaje de avance
+     - estado del proyecto (por ejemplo: no iniciado, en curso, retrasado, completado)
+
+3. Hoja "Tareas":
+   - Usar la columna "asunto breve" como fuente de hitos o tareas específicas dentro de cada etapa.
+   - No tomar en cuenta las fechas existentes en esta hoja para construir la programación.
+
+4. considerar en cálculos de fechas días laborables y no laborables perú.
+Requerimientos del dashboard:
+- El dashboard debe incluir la mayor cantidad posible de visualizaciones útiles
+- Puedes proponer libremente charts adicionales si aportan valor analítico o visual.
+- Prioriza una presentación clara, ejecutiva e interactiva.
+- Incluir métricas resumen en la parte superior.
+- Incluir filtros, por ejemplo:
+  - proyecto
+  - etapa
+  - estado
+  - rango de fechas
+
+Charts sugeridos:
+Incluye tantas visualizaciones como sea razonable, por ejemplo:
+- tarjetas KPI
+- barras de avance por proyecto
+- barras apiladas de tareas completadas vs pendientes
+- pie o donut de estados de proyectos
+- línea de tiempo de avance
+- heatmap por etapa y estado
+- tabla resumen de proyectos
+- gráfico de carga por etapa
+- gráfico de retrasos
+- gráfico de hitos cumplidos vs pendientes
+- cualquier otro chart que ayude a evaluar el seguimiento
+
+Requerimientos del Gantt:
+- Generar un Gantt programado vs real.
+- Las etapas del Gantt deben ser los valores de "LISTA CATEGORIAS" de la hoja "desplegables".
+- Los hitos deben ser cada fila de la columna "asunto breve" de la hoja "Tareas".
+- No usar las fechas de la hoja "Tareas".
+- Hacer que el proyecto actual aparezca retrasado en 1 o 2 días respecto al cronograma programado.
+- El Gantt debe permitir distinguir claramente:
+  - programado
+  - real
+  - retrasos
+  - hitos
+  - etapas
+
+Criterios de diseño:
+- Interfaz moderna y clara.
+- Código organizado y reutilizable.
+- Idealmente separar lógica de carga, transformación y visualización.

@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "640c8d42dfb3272b",
+    "id": "8f02bd43f6bfe68d",
     "type": "split",
     "children": [
       {
-        "id": "ba42a2cb27bc0a70",
+        "id": "53d2423b16427340",
         "type": "tabs",
         "children": [
           {
-            "id": "ced4e6e9772b1307",
+            "id": "1639095be50bb52c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2.1-prog-indicaciones.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2.1-prog-indicaciones"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d95e98399839247e",
+    "id": "721454ed8e140b25",
     "type": "split",
     "children": [
       {
-        "id": "0966d86e6634e6b6",
+        "id": "37d00072e6291cc5",
         "type": "tabs",
         "children": [
           {
-            "id": "0c909013b296f0ca",
+            "id": "e631452d7105162f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,11 +40,11 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de archivos"
+              "title": "Files"
             }
           },
           {
-            "id": "c3ebad66de45cef1",
+            "id": "bee47fab4542b619",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "a2feffc67e8db3cd",
+            "id": "e653add05f21bf7f",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,24 +74,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "a33f7bc51dd369a9",
+    "id": "5a470f8cbe5c14f7",
     "type": "split",
     "children": [
       {
-        "id": "8b052163841b2c3b",
+        "id": "482b1b58aee3a1d3",
         "type": "tabs",
         "children": [
           {
-            "id": "162c8885cfa78f54",
+            "id": "20137a954e161069",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "estructuraJSONnuevo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,25 +99,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for estructuraJSONnuevo"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "079c78d601f73883",
+            "id": "9a400a1c00816225",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "estructuraJSONnuevo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from estructuraJSONnuevo"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "8e53bad29adf9634",
+            "id": "a2f3f43367962651",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -138,7 +131,7 @@
             }
           },
           {
-            "id": "4e79952db16040d4",
+            "id": "bd95aa4333a7819e",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -152,18 +145,17 @@
             }
           },
           {
-            "id": "562c484a55799fed",
+            "id": "2a504dca9c0cd80b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "estructuraJSONnuevo.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of estructuraJSONnuevo"
+              "title": "Outline"
             }
           }
         ]
@@ -175,42 +167,15 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "ced4e6e9772b1307",
-  "lastOpenFiles": [
-    "2.1-prog-indicaciones.md.tmp.22592.9a17fd833d6f",
-    "2.1-prog-indicaciones.md.tmp.22592.c4000b2c7deb",
-    "programas explicacion/z4MapDF1.md",
-    "2.1-prog-indicaciones.md",
-    "prompts/prompt antigravity 1.txt",
-    "estructuraJSONnuevo.md",
-    "Untitled.md",
-    "Untitled 1.md",
-    "programas explicacion",
-    "prompts/DF1.md",
-    "prompts/1er dataframe.md",
-    "prompts",
-    "ultimoChatImportante.md",
-    "1 limpieza.md",
-    "1 und.md",
-    "1 und.md.tmp.19480.1777939065257",
-    "1 estructuraTransacciones1.md",
-    "1 df.md",
-    "1 df.md.tmp.28352.1777939038066",
-    "1 limpieza.md.tmp.24804.1777939021428",
-    "ejmJSONunRegistro.txt",
-    "jsonStrucInfo.md",
-    "estructuraTransacciones1.md",
-    "estructuraTransacciones1.md.tmp.24300.1777916673142",
-    "estructuraJSONnuevo.md~",
-    "estructuraJSONantigua.md"
-  ]
+  "active": "1639095be50bb52c",
+  "lastOpenFiles": []
 }
